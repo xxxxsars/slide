@@ -13242,9 +13242,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Object-Storage&#20171;&#32057;">Object Storage&#20171;&#32057;<a class="anchor-link" href="#Object-Storage&#20171;&#32057;">&#182;</a></h1><blockquote><p>AWS S3 與 minio Server</p>
+<h1 id="Object-Storage">Object Storage<a class="anchor-link" href="#Object-Storage">&#182;</a></h1><blockquote><p>以minio object為例</p>
 </blockquote>
-<p>Author:<a href="mailto:Reui.Huang@qsitw.com">Andy.Huang</a></p>
+<p>講者:<a href="mailto:Reui.Huang@qsitw.com">Andy.Huang</a></p>
 
 </div>
 </div>
@@ -13259,8 +13259,89 @@ a.anchor-link {
 <li>物件分散存儲於各個實體節點</li>
 <li>透過metadata連結物件</li>
 </ul>
-<p><img src="https://github.com/xxxxsars/slide/blob/master/pic/object_storage_schema.png" alt=""></p>
+<p><img src="https://raw.githubusercontent.com/xxxxsars/slide/master/pic/object_storage_schema.png"></p>
 
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Block-Storage?-File-Storage-?-Object-Storage-&#24046;&#30064;">Block Storage? File Storage ? Object Storage &#24046;&#30064;<a class="anchor-link" href="#Block-Storage?-File-Storage-?-Object-Storage-&#24046;&#30064;">&#182;</a></h3>
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Block Storage:相當於一塊硬碟，<strong>以block為儲存單位</strong>，你可以在上面建立FIle System（如Fat32,NTFS..等），來進行檔案操作。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>File Storage:相當於一個共享資料夾(如samba)，<strong>以File(檔案)為儲存單位</strong>。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Object Storage:透過API與Object Storage溝通進行檔案存取，<strong>以Objcet為單位</strong>，一個檔案可能會被切割為多個object儲存。</p>
+
+</div>
+</div>
+</div></section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="&#20778;&#32570;&#40670;&#27604;&#36611;">&#20778;&#32570;&#40670;&#27604;&#36611;<a class="anchor-link" href="#&#20778;&#32570;&#40670;&#27604;&#36611;">&#182;</a></h3><table style="font-size:25px">
+<thead><tr>
+<th>類型</th>
+<th>單位</th>
+<th>讀寫I\O</th>
+<th>共享能力</th>
+<th>擴展性</th>
+<th>可靠性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>block storage</td>
+<td>block</td>
+<td>高</td>
+<td>差</td>
+<td>差</td>
+<td>強</td>
+</tr>
+<tr>
+<td>File Storage</td>
+<td>File</td>
+<td>低</td>
+<td>強</td>
+<td>中</td>
+<td>中</td>
+</tr>
+<tr>
+<td>Object Storage</td>
+<td>Object</td>
+<td>高</td>
+<td>強</td>
+<td>強</td>
+<td>強</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Object-storage-&#25033;&#29992;">Object storage &#25033;&#29992;<a class="anchor-link" href="#Object-storage-&#25033;&#29992;">&#182;</a></h3>
 </div>
 </div>
 </div></section></section>
