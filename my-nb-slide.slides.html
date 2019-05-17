@@ -10,7 +10,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 
-<title>Object_Storage slides</title>
+<title>my-nb-slide slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -13242,9 +13242,9 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Object-Storage">Object Storage<a class="anchor-link" href="#Object-Storage">&#182;</a></h1><blockquote><p>以minio與amazon S3為例</p>
+<h1 id="Jupyter-Notebook-&#20351;&#29992;&#25216;&#24039;&#24409;&#25972;">Jupyter Notebook &#20351;&#29992;&#25216;&#24039;&#24409;&#25972;<a class="anchor-link" href="#Jupyter-Notebook-&#20351;&#29992;&#25216;&#24039;&#24409;&#25972;">&#182;</a></h1><blockquote><p>轉換為投影片格式</p>
 </blockquote>
-<p>講者:<a href="mailto:Reui.Huang@qsitw.com">Andy.Huang</a></p>
+<p><a href="https://www.facebook.com/pyradise.geek/">Pyradise</a>，郭耀仁</p>
 
 </div>
 </div>
@@ -13252,392 +13252,273 @@ a.anchor-link {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#20160;&#40636;&#26159;Object-Storage">&#20160;&#40636;&#26159;Object Storage<a class="anchor-link" href="#&#20160;&#40636;&#26159;Object-Storage">&#182;</a></h3><ul>
-<li>檔案儲存成物件(Object)</li>
-<li>每個物件有獨特的ID </li>
-<li>metadata用來描述物件的屬性</li>
-<li>物件分散存儲於各個實體節點</li>
-<li>透過metadata連結物件</li>
-</ul>
-<p><img src="https://github.com/xxxxsars/slide/blob/master/pic/object_storage_schema.png?raw=true"></p>
+<h2 id="&#27700;&#24179;&#25237;&#24433;&#29255;">&#27700;&#24179;&#25237;&#24433;&#29255;<a class="anchor-link" href="#&#27700;&#24179;&#25237;&#24433;&#29255;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Horizontal slide&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Horizontal slide
+</pre>
+</div>
+</div>
 
 </div>
 </div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#22914;&#20309;&#25805;&#20316;Object-Storage">&#22914;&#20309;&#25805;&#20316;Object Storage<a class="anchor-link" href="#&#22914;&#20309;&#25805;&#20316;Object-Storage">&#182;</a></h3>
-</div>
-</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>必須先建立bucket</p>
+<h2 id="&#22402;&#30452;&#25237;&#24433;&#29255;">&#22402;&#30452;&#25237;&#24433;&#29255;<a class="anchor-link" href="#&#22402;&#30452;&#25237;&#24433;&#29255;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Vertical slide&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Vertical slide
+</pre>
+</div>
+</div>
 
 </div>
 </div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>檔案必須儲存於bucket中(Bucket裏面無法再放一個Bucket，但可以放folder)，可以想像bucket就是一顆硬碟。</p>
 
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>透過ResfFul API 進行存取</p>
-<p><img src="https://github.com/xxxxsars/slide/blob/master/pic/objectstorage.png?raw=true" alt=""></p>
-
-</div>
-</div>
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Block-Storage?-File-Storage-?-Object-Storage-&#24046;&#30064;">Block Storage? File Storage ? Object Storage &#24046;&#30064;<a class="anchor-link" href="#Block-Storage?-File-Storage-?-Object-Storage-&#24046;&#30064;">&#182;</a></h3>
+<h2 id="&#21478;&#19968;&#24373;&#27700;&#24179;&#25237;&#24433;&#29255;">&#21478;&#19968;&#24373;&#27700;&#24179;&#25237;&#24433;&#29255;<a class="anchor-link" href="#&#21478;&#19968;&#24373;&#27700;&#24179;&#25237;&#24433;&#29255;">&#182;</a></h2>
 </div>
 </div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Another horizontal slide&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Another horizontal slide
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div></section><section>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Block Storage:相當於一塊硬碟，<strong>以block為儲存單位</strong>，你可以在上面建立FIle System（如Fat32,NTFS..等），來進行檔案操作。</p>
+<h2 id="&#21478;&#19968;&#24373;&#22402;&#30452;&#25237;&#24433;&#29255;">&#21478;&#19968;&#24373;&#22402;&#30452;&#25237;&#24433;&#29255;<a class="anchor-link" href="#&#21478;&#19968;&#24373;&#22402;&#30452;&#25237;&#24433;&#29255;">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Another vertical slide&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Another vertical slide
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>File Storage:相當於一個共享資料夾(如samba)，<strong>以File(檔案)為儲存單位</strong>。</p>
+<h2 id="Fragment-&#25237;&#24433;&#29255;">Fragment &#25237;&#24433;&#29255;<a class="anchor-link" href="#Fragment-&#25237;&#24433;&#29255;">&#182;</a></h2>
+</div>
+</div>
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;A fragment slide&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>A fragment slide
+</pre>
+</div>
+</div>
 
 </div>
 </div>
+
 </div></div><div class="fragment">
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Object Storage:透過API與Object Storage溝通進行檔案存取，<strong>以Objcet為單位</strong>，一個檔案可能會被切割為多個object儲存。</p>
-
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#20778;&#32570;&#40670;&#27604;&#36611;">&#20778;&#32570;&#40670;&#27604;&#36611;<a class="anchor-link" href="#&#20778;&#32570;&#40670;&#27604;&#36611;">&#182;</a></h3><table style="font-size:25px">
-<thead><tr>
-<th>類型</th>
-<th>單位</th>
-<th>讀寫I\O</th>
-<th>共享能力</th>
-<th>擴展性</th>
-<th>可靠性</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>block storage</td>
-<td>block</td>
-<td>高</td>
-<td>差</td>
-<td>差</td>
-<td>強</td>
-</tr>
-<tr>
-<td>File Storage</td>
-<td>File</td>
-<td>低</td>
-<td>強</td>
-<td>中</td>
-<td>中</td>
-</tr>
-<tr>
-<td>Object Storage</td>
-<td>Object</td>
-<td>中</td>
-<td>強</td>
-<td>強</td>
-<td>強</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Object-Storage-&#25033;&#29992;">Object Storage &#25033;&#29992;<a class="anchor-link" href="#Object-Storage-&#25033;&#29992;">&#182;</a></h3><p>King County 第一年使用 Amazon S3取代傳統磁碟備份省下一百萬美元</p>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p>King County是華盛頓州人口最多的縣，擁有約<strong>190萬居民</strong>，該縣需存儲由17個不同縣級機構生成的資訊，因此利用Amazon s3來取代傳統的硬碟備份，因不必更換過時伺服器，降低與數據存儲相關的運營成本，該縣第一年節省了約100萬美元。</p>
-
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="&#20854;&#20182;&#20351;&#29992;&#24773;&#22659;">&#20854;&#20182;&#20351;&#29992;&#24773;&#22659;<a class="anchor-link" href="#&#20854;&#20182;&#20351;&#29992;&#24773;&#22659;">&#182;</a></h3><ul>
-<li>醫療保健資訊存檔 : 醫院系統需要保留數 PB 的病患記錄長達數十年。</li>
-</ul>
-<ul>
-<li>法規和合規存檔 : 金融服務和醫療保健這樣的許多企業都必須長時間保留法規和合規存檔。</li>
-</ul>
-<ul>
-<li>數位保留 : 圖書館和政府機構在努力進行數位保存時，面對到資料整合的難題，Amazon s3可以定期執行系統的資料完整性檢查，並且內建自動的自我修復能力。</li>
-</ul>
-
-</div>
-</div>
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Object-Storage--&#25805;&#20316;">Object Storage  &#25805;&#20316;<a class="anchor-link" href="#Object-Storage--&#25805;&#20316;">&#182;</a></h3><blockquote><p>以minio為例</p>
-</blockquote>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>下載Minio Server <a href="https://min.io/download#/windows">Download Link</a></li>
-</ol>
-
-</div>
-</div>
-</div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>啟動Minin Server</li>
-</ol>
-<div class="highlight"><pre><span></span>mkdir data 
-./minio server data/
-</pre></div>
-
+<h2 id="&#21478;&#19968;&#24373;-Fragment-&#25237;&#24433;&#29255;">&#21478;&#19968;&#24373; Fragment &#25237;&#24433;&#29255;<a class="anchor-link" href="#&#21478;&#19968;&#24373;-Fragment-&#25237;&#24433;&#29255;">&#182;</a></h2>
 </div>
 </div>
 </div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>透過browser存取 <a href="http://localhost:9000/minio/login">Link</a></li>
-</ol>
-
-</div>
-</div>
-</div></div><div class="fragment">
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ol>
-<li>透過golang來操作 <a href="https://golang.org/doc/install">如何安裝</a></li>
-</ol>
-
-</div>
-</div>
-</div></div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>安裝golang minio sdk
-<pre><code>golang
-go get -u github.com/minio/minio-go</code></pre>
-</li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>建立Bucket </li>
-</ul>
-
-</div>
-</div>
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="p">(</span>
-	<span class="s2">&quot;github.com/minio/minio-go&quot;</span>
-	<span class="s2">&quot;log&quot;</span>
-<span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Another fragment slide&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div><div class="fragment">
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">endpoint</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;localhost:9000&quot;</span>
-<span class="n">accessKeyID</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;&lt;your server ID&gt;&quot;</span>
-<span class="n">secretAccessKey</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;&lt;your server key&gt;&quot;</span>
-<span class="n">bucketName</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;test&quot;</span>
-<span class="n">useSSL</span> <span class="p">:</span><span class="o">=</span> <span class="n">false</span>
+<div class="output_wrapper">
+<div class="output">
 
-<span class="n">minioClient</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="n">minio</span><span class="o">.</span><span class="n">New</span><span class="p">(</span><span class="n">endpoint</span><span class="p">,</span> <span class="n">accessKeyID</span><span class="p">,</span> <span class="n">secretAccessKey</span><span class="p">,</span> <span class="n">useSSL</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">Fatalln</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
 
-    </div>
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Another fragment slide
+</pre>
 </div>
 </div>
 
-</div></div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">location</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;us-east-1&quot;</span>
-<span class="n">err</span> <span class="o">=</span> <span class="n">minioClient</span><span class="o">.</span><span class="n">MakeBucket</span><span class="p">(</span><span class="n">bucketName</span><span class="p">,</span> <span class="n">location</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-    <span class="n">exists</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="n">minioClient</span><span class="o">.</span><span class="n">BucketExists</span><span class="p">(</span><span class="n">bucketName</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">err</span> <span class="o">==</span> <span class="n">nil</span> <span class="o">&amp;&amp;</span> <span class="n">exists</span> <span class="p">{</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;We already own </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">bucketName</span><span class="p">)</span>
-    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">Fatalln</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-    <span class="p">}</span>
-<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">Printf</span><span class="p">(</span><span class="s2">&quot;Successfully created </span><span class="si">%s</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">bucketName</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
 </div>
 </div>
 
-</div></section><section>
+</div><aside class="notes">
+
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>上傳檔案到bucket</li>
-</ul>
+<h2 id="Notes">Notes<a class="anchor-link" href="#Notes">&#182;</a></h2>
+</div>
+</div>
+</div>
+</aside><aside class="notes">
 
-</div>
-</div>
-</div></section><section>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="prompt input_prompt">In&nbsp;[0]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">fileName</span> <span class="p">:</span><span class="o">=</span> <span class="s2">&quot;test.txt&quot;</span>
-<span class="n">objectName</span> <span class="p">:</span><span class="o">=</span> <span class="n">fileName</span>
-
-<span class="n">n</span><span class="p">,</span> <span class="n">err</span> <span class="p">:</span><span class="o">=</span> <span class="n">minioClient</span><span class="o">.</span><span class="n">FPutObject</span><span class="p">(</span><span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">,</span> <span class="n">fileName</span><span class="p">,</span> <span class="n">minio</span><span class="o">.</span><span class="n">PutObjectOptions</span><span class="p">{})</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-<span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="s2">&quot;Successfully uploaded bytes: &quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Notes slide&quot;</span><span class="p">)</span>
 </pre></div>
 
     </div>
 </div>
 </div>
 
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>查詢上傳的檔案</li>
-</ul>
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Notes slide
+</pre>
+</div>
+</div>
 
 </div>
 </div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">doneCh</span> <span class="p">:</span><span class="o">=</span> <span class="n">make</span><span class="p">(</span><span class="n">chan</span> <span class="n">struct</span><span class="p">{})</span>
-<span class="n">defer</span> <span class="n">close</span><span class="p">(</span><span class="n">doneCh</span><span class="p">)</span>
-
-<span class="n">isRecursive</span> <span class="p">:</span><span class="o">=</span> <span class="n">true</span>
-<span class="n">objectCh</span> <span class="p">:</span><span class="o">=</span> <span class="n">minioClient</span><span class="o">.</span><span class="n">ListObjects</span><span class="p">(</span><span class="n">bucketName</span><span class="p">,</span> <span class="s2">&quot;test.txt&quot;</span><span class="p">,</span> <span class="n">isRecursive</span><span class="p">,</span> <span class="n">doneCh</span><span class="p">)</span>
-
-<span class="k">for</span> <span class="nb">object</span> <span class="p">:</span><span class="o">=</span> <span class="nb">range</span> <span class="n">objectCh</span> <span class="p">{</span>
-    <span class="k">if</span> <span class="nb">object</span><span class="o">.</span><span class="n">Err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">Err</span><span class="p">)</span>
-    <span class="p">}</span>
-    <span class="n">log</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="nb">object</span><span class="o">.</span><span class="n">Key</span><span class="p">,</span> <span class="nb">object</span><span class="o">.</span><span class="n">Size</span><span class="p">)</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<ul>
-<li>刪除檔案</li>
-</ul>
 
 </div>
-</div>
-</div></section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">err</span> <span class="o">=</span> <span class="n">minioClient</span><span class="o">.</span><span class="n">RemoveObject</span><span class="p">(</span><span class="n">bucketName</span><span class="p">,</span> <span class="n">objectName</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">err</span> <span class="o">!=</span> <span class="n">nil</span> <span class="p">{</span>
-    <span class="n">fmt</span><span class="o">.</span><span class="n">Println</span><span class="p">(</span><span class="n">err</span><span class="p">)</span>
-    <span class="k">return</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Q&amp;A">Q&amp;A<a class="anchor-link" href="#Q&amp;A">&#182;</a></h3>
-</div>
-</div>
-</div></section></section>
+</aside></div></section></section>
 </div>
 </div>
 
